@@ -16,9 +16,14 @@ The spam links all seem suspicious
 - The hamlinks contain examples of legitimate news headlines
 	
 ### How to Run
-Developed and tested with Python 2.7.13
+- Developed and tested with Python 2.7.13
+- First install dependencies:
 
-	$ python SpamFilter.py
+		$ pip install -U textblob
+		$ python -m textblob.download_corpora
+To Run:
+	
+		$ python SpamFilter.py
 
 ### Output
 In this example the spam filter is checking the headline:
