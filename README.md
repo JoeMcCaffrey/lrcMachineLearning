@@ -32,15 +32,24 @@ In this example the spam filter is checking the headline:
 
 The output from the classifier:
 	
-	$ The text is Spam:  neg
+	$ text:  D.C. court rules tracking phones without a warrant is unconstitutional
+	The text is Spam:  neg
 	Percentage of pos result:  0.01
 	Percentage of neg result:  0.99
+	============================================
+	text:  Why you should never sign a cell phone contract again
+	The text is Spam:  pos
+	Percentage of pos result:  1.0
+	Percentage of neg result:  0.0
+	============================================
 	Most Informative Features
-           contains(you) = True              pos : neg    =      8.4 : 1.0
-           contains(How) = True              pos : neg    =      7.6 : 1.0
-           contains(all) = True              pos : neg    =      5.9 : 1.0
-           contains(n't) = True              pos : neg    =      4.2 : 1.0
-          contains(what) = True              pos : neg    =      4.2 : 1.0
+	           contains(you) = True              pos : neg    =      8.4 : 1.0
+	           contains(How) = True              pos : neg    =      7.6 : 1.0
+	           contains(all) = True              pos : neg    =      5.9 : 1.0
+	           contains(n't) = True              pos : neg    =      4.2 : 1.0
+	          contains(what) = True              pos : neg    =      4.2 : 1.0
+	None
+
 
 The classifer is telling us that the headline is not spam and it is 99% certain.
 
