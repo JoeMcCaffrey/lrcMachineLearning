@@ -43,17 +43,16 @@ test = "D.C. court rules tracking phones without a warrant is unconstitutional"
 
 res = cl.classify(test)
 print "text: ", test
-print ""
 print "The text is Spam: ", res
 
 res_prob = cl.prob_classify(test)
 
 print "Percentage of pos result: ", round(res_prob.prob("pos"), 2)
 print "Percentage of neg result: ", round(res_prob.prob("neg"), 2)
-
-test2 = "11 life-changing trips to take in your 30s"
+print "============================================"
+test = "11 life-changing trips to take in your 30s"
+test2 = "Why you should never sign a cell phone contract again"
 print "text: ", test2
-print ""
 
 res2 = cl.classify(test2)
 print "The text is Spam: ", res2
@@ -62,7 +61,7 @@ res_prob2 = cl.prob_classify(test2)
 
 print "Percentage of pos result: ", round(res_prob2.prob("pos"), 2)
 print "Percentage of neg result: ", round(res_prob2.prob("neg"), 2)
-
+print "============================================"
 
 
 
