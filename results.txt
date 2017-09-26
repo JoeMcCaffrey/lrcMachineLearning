@@ -1,0 +1,10 @@
+SPAM:  Here's what to know about tonight's #HealthCareDebate
+SPAM:  Eat at this restaurant in a Parisian station and you just might be willing to miss your train
+SPAM:  Find out if you're making more or less money than people your age
+Most Informative Features
+           contains(you) = True              pos : neg    =      8.4 : 1.0
+           contains(How) = True              pos : neg    =      7.6 : 1.0
+           contains(all) = True              pos : neg    =      5.9 : 1.0
+           contains(n't) = True              pos : neg    =      4.2 : 1.0
+          contains(what) = True              pos : neg    =      4.2 : 1.0
+None

@@ -39,17 +39,37 @@ train_links = ham_links + spam_links
 
 # create classifier
 cl = NaiveBayesClassifier(train_links)
-test = "D.C. court rules tracking phones without a warrant is unconstitutional"
+#test = "D.C. court rules tracking phones without a warrant is unconstitutional"
 
-res = cl.classify(test)
-print "The text is Spam: ", res
+#res = cl.classify(test)
+#print "The text is Spam: ", res
 
-res_prob = cl.prob_classify(test)
+with open('twitter_links.txt') as f:
+    test_data = f.readlines()
 
-print "Percentage of pos result: ", round(res_prob.prob("pos"), 2)
-print "Percentage of neg result: ", round(res_prob.prob("neg"), 2)
+# Strip off \n
+test_data = [x.strip() for x in test_data]
+# Get rid of ascii errors
+test_data = [x.decode("ascii", errors="ignore").encode() for x in test_data]
 
-print cl.show_informative_features(5)
+for i in test_data:
+#    print i
+    #res = cl.classify(i)
+    prob = cl.prob_classify(i)
+    res = round(prob.prob("pos"),2)
+    res = res * 100
+    if res >= 50:
+        print "SPAM: ", i
+        print res
+
+
+
+#res_prob = cl.prob_classify(test)
+
+#print "Percentage of pos result: ", round(res_prob.prob("pos"), 2)
+#print "Percentage of neg result: ", round(res_prob.prob("neg"), 2)
+
+#print cl.show_informative_features(5)
 
 
 
