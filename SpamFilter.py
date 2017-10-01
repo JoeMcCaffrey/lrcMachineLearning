@@ -44,7 +44,7 @@ cl = NaiveBayesClassifier(train_links)
 #res = cl.classify(test)
 #print "The text is Spam: ", res
 
-with open('twitter_links.txt') as f:
+with open('twitter.txt') as f:
     test_data = f.readlines()
 
 # Strip off \n
